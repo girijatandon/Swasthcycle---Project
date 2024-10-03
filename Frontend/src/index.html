@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menstrual Cycle Tracker</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Optional CSS file for styles -->
+</head>
+
+<body>
+    <div id="app" style="font-family: Arial; padding: 20px;">
+        <h1>Menstrual Cycle Tracker</h1>
+        <div style="margin-bottom: 15px;">
+            <label style="margin-right: 10px;">Last Period Date:</label>
+            <input type="date" id="lastPeriod" />
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label style="margin-right: 10px;">Cycle Length (days):</label>
+            <input type="number" id="cycleLength" min="21" max="35" value="28" />
+        </div>
+        <button id="calculateButton" style="margin-bottom: 15px;">Calculate Next Period</button>
+        <div id="nextPeriodContainer"></div>
+    </div>
+    <script src="App.jsx"></script>
+    <!-- Link to JavaScript file -->
+</body>
+
+</html>

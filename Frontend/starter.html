@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SwasthCycle - Menstrual Health Tracker</title>
+    <link rel="stylesheet" href="dessert.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>SwasthCycle</h1>
+            <p>Empowering Women's Health</p>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Track Cycle</a></li>
+                    <li><a href="#">Family Account</a></li>
+                    <li><a href="#">Health Insights</a></li>
+                    <li><a href="#">Education for Family</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Image -->
+    <section class="hero">
+        <div class="container">
+            <img src="https://via.placeholder.com/1200x500" alt="Empowering Women's Health">
+            <div class="hero-text">
+                <h2>Track, Predict & Educate</h2>
+                <p>Empower yourself and your family with comprehensive menstrual health insights.</p>
+                <a href="#" class="cta-button">Start Tracking</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Account Section -->
+    <section class="family-section">
+        <div class="container">
+            <h2>Create a Family Account</h2>
+            <p>Add your family members to help support and understand menstrual health.</p>
+
+            <!-- Form to Add Family Members -->
+            <form id="family-form">
+                <label for="family-name">Family Member Name:</label>
+                <input type="text" id="family-name" placeholder="Enter family member's name" required>
+
+                <label for="relation">Relationship:</label>
+                <select id="relation" required>
+                    <option value="self">Self</option>
+                    <option value="mother">Mother</option>
+                    <option value="father">Father</option>
+                    <option value="sibling">Sibling</option>
+                    <option value="partner">Partner</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter family member's email" required>
+
+                <label for="notification">Receive Menstrual Alerts:</label>
+                <select id="notification" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <button type="submit">Add Family Member</button>
+            </form>
+
+            <!-- Family Members List -->
+            <div id="family-list">
+                <h3>Family Members:</h3>
+                <ul id="family-members">
+                    <!-- Family members will be dynamically added here -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cycle Tracking Section -->
+    <section class="tracker-section">
+        <div class="container">
+            <h2>Track Your Cycle</h2>
+            <form id="cycle-form">
+                <label for="start-date">Last Period Start Date:</label>
+                <input type="date" id="start-date" required>
+
+                <label for="cycle-length">Cycle Length (Days):</label>
+                <input type="number" id="cycle-length" placeholder="Enter your cycle length" required>
+
+                <label for="symptoms">Log Symptoms:</label>
+                <input type="text" id="symptoms" placeholder="Cramps, fatigue, etc." required>
+
+                <label for="mood">Log Mood:</label>
+                <input type="text" id="mood" placeholder="Mood swings, irritability, etc." required>
+
+                <button type="submit">Predict Next Cycle</button>
+            </form>
+
+            <div id="result">
+                <h3>Next Predicted Cycle Start Date: <span id="next-date"></span></h3>
+                <h3>Ovulation Day: <span id="ovulation-date"></span></h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Content for Family Section -->
+    <section class="education-section">
+        <div class="container">
+            <h2>Education for Family Members</h2>
+            <p>Helping family members understand the menstrual cycle and support women.</p>
+
+            <!-- Articles Section -->
+            <div class="education-content">
+                <div class="education-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIrcVK_T8zpdLo3r3XGEJIaIK3u_jN-uI6sg&s" alt="Article Image">
+                    <h3>Understanding the Menstrual Cycle</h3>
+                    <p>A guide to help family members understand each phase of the menstrual cycle.</p>
+                    <a href="#" class="learn-more">Read More</a>
+                </div>
+
+                <div class="education-item">
+                    <img src="https://www.orfonline.org/public/uploads/posts/image/menstrual.jpg" alt="Video">
+                    <h3>Video: How to Support Women During Their Period</h3>
+                    <p>A video with tips and advice on how family members can support women.</p>
+                    <a href="#" class="learn-more">Watch Video</a>
+                </div>
+
+                <div class="education-item">
+                    <img src="https://www.ujaas.in/uploads/images/menstrual-health-hygiene421.jpg" alt="Myth Debunking">
+                    <h3>Debunking Menstrual Myths</h3>
+                    <p>Learn the truth behind common myths about menstruation.</p>
+                    <a href="#" class="learn-more">Explore Myths</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Community Support Platform Section -->
+    <section class="community-section">
+        <div class="container">
+            <h2>Community Support Platform</h2>
+            <p>Join the community to ask questions, share experiences, and support one another.</p>
+
+            <!-- Community Post Form -->
+            <form id="community-form">
+                <label for="post-title">Title:</label>
+                <input type="text" id="post-title" placeholder="Enter post title" required>
+
+                <label for="post-content">Your Post:</label>
+                <textarea id="post-content" placeholder="Share your thoughts or ask a question..." required></textarea>
+
+                <button type="submit">Submit Post</button>
+            </form>
+
+            <!-- Community Posts Section -->
+            <div id="community-posts">
+                <h3>Community Posts:</h3>
+                <ul id="posts-list">
+                    <!-- Posts will be dynamically added here -->
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Health Insights and Tips Section -->
+    <section class="insights-section">
+        <div class="container">
+            <h2>Health Insights and Tips</h2>
+            <p>Stay informed with the latest tips and insights to maintain good menstrual health.</p>
+
+            <!-- Health Articles Section -->
+            <div class="insights-content">
+                <div class="insight-item">
+                    <img src="https://via.placeholder.com/300">
+                    <h3>Best Foods During Your Period</h3>
+                    <p>Discover which foods can help reduce cramps and boost energy levels during menstruation.</p>
+                    <a href="#" class="learn-more">Read More</a>
+                </div>
+
+                <div class="insight-item">
+                    <img src="data:image/jpeg;base64,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" alt="Menstrual Cycle">
+                    <h3>Understanding Your Menstrual Cycle</h3>
+                    <p>A comprehensive guide to the menstrual cycle, its phases, and how to track it effectively.</p>
+                    <a href="#" class="learn-more">Read More</a>
+                </div>
+
+                <div class="insight-item">
+                    <img src="https://via.placeholder.com/300">
+                    <h3>Self-Care During Menstruation</h3>
+                    <p>Learn self-care routines that can help alleviate discomfort and maintain mental well-being.</p>
+                    <a href="#" class="learn-more">Explore Tips</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SwasthCycle. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
